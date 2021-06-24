@@ -1,0 +1,143 @@
+
+.pageBox{
+    display:flex;
+    flex-direction: column;
+}
+.btnPageBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.formContainer{
+    margin-left: 50px;
+}
+.dinoCard{
+    font-family:monospace;
+    border-radius: 25px;
+    background-color: rgba(5, 6, 7, 0.4);
+    display:flex;
+    flex-direction: column;
+    margin:5px;
+    width:260px;
+    height: 205px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(100, 96, 96);
+    outline:none;
+    font-size:0px;
+    padding-bottom: 5px;
+}
+.dinoCard:hover{
+    height:fit-content;
+    font-size:13px;
+    background-color:rgba(141, 56, 0, 0.7);
+}
+.dinoCardNotFound{
+    font-family:monospace;
+    border-radius: 25px;
+    background-color: rgba(5, 6, 7, 0.4);
+    display:flex;
+    flex-direction: column;
+    margin:5px;
+    width:500px;
+    height: 430px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(100, 96, 96);
+}
+.homeName{ 
+    font-size: 12px;  /* hago los nombres de dino siempre visibles */
+}
+.textCardNotFound{
+    font-size:20px;
+    display:flex;
+    flex-direction: column;
+    color:rgb(250,243,243);
+}
+.textCard{
+    font-weight:bolder;
+    display:flex;
+    flex-direction: column;
+    color:rgb(250,243,243);
+}
+.imgCard{
+    border-radius: 20px;
+    margin: 10px;
+
+}
+.bar{
+    font-family:monospace;
+    padding-left:50px;
+    height:40px;
+    background-color: rgba(5, 6, 7, 0.4);
+    padding-top: 10px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.barItem{
+    margin-top:3px;
+    margin-left: 15px;
+    font-size:20px ;
+    color:rgb(250,243,243);
+}
+.btn{
+    font-family:monospace;
+    height:25px;
+    margin-top:5px;
+    margin-left: 5px;
+    border-radius: 3px;
+    background-color: rgb(250,243,243);
+    color:rgb(2,46,87);
+    border-width: 1px;
+    border-style: solid;
+    border-color:rgb(100, 96, 96);
+    outline:none;
+}
+.btn:hover{
+    color: rgb(250,243,243);
+    background-color:rgba(5, 6, 7, 0.4);
+}
+.btnCreate{
+    position: absolute;
+    right:50px;
+}
+
+.btnPage{
+    height:25px;
+    margin:10px;
+    border-radius: 3px;
+    background-color: rgb(250,243,243, 0.8);
+    color:rgb(37, 34, 34);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(100, 96, 96);
+    outline:none;
+}
+.btnPage:hover{
+    color: rgb(250,243,243);
+    background-color:rgb(2,46,87, 0.8);
+    
+}
+.numberPage{
+    padding-left: 5px;
+    padding-right: 5px;
+    height:25px;
+    margin:9px;
+    border-radius: 3px;
+    background-color: rgb(250,243,243, 0.8);
+    color:rgb(37, 34, 34);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(100, 96, 96);
+    outline:none;
+}
+.cardsBox{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loadingHome{
+    display:flex;
+    flex-direction: column;
+}
