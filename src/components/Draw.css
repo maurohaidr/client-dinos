@@ -1,0 +1,11 @@
+.DrawBox{
+    border: "0.0625rem solid #9c9c9c";
+    margin-left: 26%;
+    width:600px;
+    height:350px
+  };
+  .buttonBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+  }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './home.css'
 import{ getDinos } from '../actions/actions'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 
 const Home = (props) => {
@@ -11,7 +11,9 @@ const Home = (props) => {
   const [page, setPage] = useState(0)
   const [ascenDescen, setAscenDescen] = useState('up')
   const [searching, setSearching] = useState(false)
-
+  useEffect(() => {
+    props.getDinos(undefined)
+    }, [])
 
   let handleChange = function (e) {
       setDino(e.target.value);
@@ -21,7 +23,7 @@ const Home = (props) => {
   let handleSubmit = function(e) {
       e.preventDefault(); 
       console.log('home ' + dino)
-/*       props.getDinos(undefined) */
+      props.getDinos(undefined)
       setSearching(true)
       setPage(0)
       props.getDinos(dino.toLowerCase())
@@ -105,6 +107,9 @@ return(
     </div>
     : null
     }
+    <Link className='btnCreate' to='/addDino'>
+        <button className='btn'>Add Dino</button>
+    </Link>
     
     <div className='cardsBox'>
       {props.dinos && props.dinos.length > 0 ? props.dinos.slice(page*8, page*8+8).map((e) => {
