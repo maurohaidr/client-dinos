@@ -37,7 +37,7 @@ const AddDino = (props) => {
     
     const handleSubmit = async e => {        
         e.preventDefault()   
-        axios.post(`http://${DB_HOST}:3001/postDino`, state)
+        axios.post(`https://server-dinos.herokuapp.com/postDino`, state)
         alert('Dino added')           
       }
     
