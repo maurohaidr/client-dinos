@@ -27,6 +27,14 @@ const Draw = (props) => {
         setWidth(2)
       setColor('black')
     }
+    const handleRosa = function(){
+      setWidth(2)
+    setColor('rosa')
+  }
+  const handleVioleta = function(){
+    setWidth(2)
+  setColor('violeta')
+}
     const handleErase = function(){
         setColor('white')
         setWidth(25)
@@ -54,11 +62,13 @@ const Draw = (props) => {
         strokeColor={color}
         />
         <div className='buttonBox'>
-        <button onClick={handleRed}>Rojo</button>
-        <button onClick={handleBlack}>Negro</button>
-        <button onClick={handleGreen}>Verde</button>
-        <button onClick={handleBlue}>Azul</button>
-        <button onClick={handleErase}>Borrar</button>        
+        <button className='rojo' onClick={handleRed}>Rojo</button>
+        <button className='negro' onClick={handleBlack}>Negro</button>
+        <button className='verde' onClick={handleGreen}>Verde</button>
+        <button className='azul' onClick={handleBlue}>Azul</button>
+        <button className='rosa' onClick={handleRosa}>Rosa</button>
+        <button className='violeta' onClick={handleVioleta}>Violeta</button>
+        <button className='borrar' onClick={handleErase}>Borrar</button>        
         </div>
         </div>
         </div>
