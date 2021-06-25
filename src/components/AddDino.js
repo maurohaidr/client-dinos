@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios"
 import { Link } from "react-router-dom";
-import Draw from './Draw'
 import { connect } from "react-redux";
-
+import './AddDino.css'
+const { DB_HOST } = process.env
 const AddDino = (props) => {
     const[state, setState] = useState({
         nombre: '',
@@ -37,21 +37,9 @@ const AddDino = (props) => {
     
     const handleSubmit = async e => {        
         e.preventDefault()   
-        axios.post("http://localhost:3001/postDino", state)
+        axios.post(`http://${DB_HOST}:3001/postDino`, state)
         alert('Dino added')           
       }
-
-    const handleDibujar = function() {
-
-       if(state.draw === false) setState({
-           ...state,
-           draw:true
-       })
-       else setState({
-           ...state,
-           draw:false
-       })
-    }
     
     return (
       <div className='formBox'>
@@ -95,11 +83,7 @@ const AddDino = (props) => {
           <input className='btnCre' type='submit' value='Add'/>
           </div>
         </form>
-        <div>
-          <button onClick={handleDibujar}>Dibujar</button>
-          </div>
         </div>
-        {state.draw ? <Draw/> : null}
       </div>
     )
   };

@@ -3,6 +3,7 @@ import { ReactSketchCanvas } from "react-sketch-canvas";
 import './Draw.css'
 import { connect } from "react-redux";
 import{ sendImg } from '../actions/actions'
+import { Link } from "react-router-dom";
 
 const Draw = (props) => {
     var canvas = React.createRef();
@@ -30,33 +31,35 @@ const Draw = (props) => {
         setColor('white')
         setWidth(25)
     }
+    const handleUpload = () => {
+      canvas.current.exportImage("png")
+        .then(data => {
+          console.log('draw' + data);
+          props.sendImg(data)
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    }
     return (
+        <div className='drawContainer'>
         <div className='DrawBox'>
+        <h2>Dibuja el dino que deseas crear</h2>
+        <Link to='/AddDino'>
+        <button onClick={handleUpload}>Listo!</button>
+        </Link>
         <ReactSketchCanvas
         ref={canvas}
         strokeWidth={width}
         strokeColor={color}
         />
         <div className='buttonBox'>
-        <button onClick={handleRed}>red</button>
-        <button onClick={handleBlack}>black</button>
-        <button onClick={handleGreen}>green</button>
-        <button onClick={handleBlue}>blue</button>
-        <button onClick={handleErase}>erase</button>
-        <button
-          onClick={() => {
-            canvas.current.exportImage("png")
-              .then(data => {
-                console.log('draw' + data);
-                props.sendImg(data)
-              })
-              .catch(e => {
-                console.log(e);
-              });
-          }}
-        >
-          Use Image
-        </button>
+        <button onClick={handleRed}>Rojo</button>
+        <button onClick={handleBlack}>Negro</button>
+        <button onClick={handleGreen}>Verde</button>
+        <button onClick={handleBlue}>Azul</button>
+        <button onClick={handleErase}>Borrar</button>        
+        </div>
         </div>
         </div>
     );

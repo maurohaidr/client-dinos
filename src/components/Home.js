@@ -16,8 +16,7 @@ const Home = (props) => {
     }, [])
 
   let handleChange = function (e) {
-      setDino(e.target.value);
-      
+      setDino(e.target.value);      
   }
 
   let handleSubmit = function(e) {
@@ -82,6 +81,9 @@ return(
         onChange={(e) => handleChange(e)}
       />
       <button className='btn' type="submit">Search</button>
+      <Link className='btnCreate' to='/Draw'>
+        <button className='btn'>Add Dino</button>
+    </Link>
     </form>
 {/*     <span className='barItem'>Search:</span>
     <button className='btn' onClick={(e) => toggleFilter(e)}>{filter}</button>      
@@ -107,9 +109,7 @@ return(
     </div>
     : null
     }
-    <Link className='btnCreate' to='/addDino'>
-        <button className='btn'>Add Dino</button>
-    </Link>
+
     
     <div className='cardsBox'>
       {props.dinos && props.dinos.length > 0 ? props.dinos.slice(page*8, page*8+8).map((e) => {
