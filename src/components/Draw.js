@@ -12,33 +12,33 @@ const Draw = (props) => {
     const [width, setWidth] = useState(2)
     
     const handleRed = function(){
-        setWidth(2)
+      setWidth(2)
       setColor('red')
     }
     const handleGreen = function(){
-        setWidth(2)
+      setWidth(2)
       setColor('green')
     }
     const handleBlue = function(){
-        setWidth(2)
+      setWidth(2)
       setColor('blue')
     }
     const handleBlack = function(){
-        setWidth(2)
+      setWidth(2)
       setColor('black')
     }
     const handleRosa = function(){
-      setWidth(2)
-    setColor('pink')
-  }
-  const handleVioleta = function(){
     setWidth(2)
-  setColor('purple')
-}
-const handleAmarillo = function(){
-  setWidth(2)
-setColor('yellow')
-}
+    setColor('pink')
+    }
+    const handleVioleta = function(){
+    setWidth(2)
+    setColor('purple')
+    }
+    const handleAmarillo = function(){
+    setWidth(2)
+    setColor('yellow')
+    }
     const handleErase = function(){
         setColor('white')
         setWidth(25)
@@ -53,6 +53,12 @@ setColor('yellow')
           console.log(e);
         });
     }
+    const handleBigger = function() {
+      setWidth(width + 2)
+    }
+    const handleSmaller = function() {
+      if(width > 2) setWidth(width - 2)
+    }
     return (
         <div className='drawContainer'>
         <div className='DrawBox'>
@@ -66,6 +72,8 @@ setColor('yellow')
         strokeColor={color}
         />
         <div className='buttonBox'>
+        <button  onClick={handleBigger}>+</button>
+        <button  onClick={handleSmaller}>-</button>
         <button className='rojo' onClick={handleRed}></button>
         <button className='negro' onClick={handleBlack}></button>
         <button className='verde' onClick={handleGreen}></button>
