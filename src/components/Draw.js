@@ -46,7 +46,6 @@ const Draw = (props) => {
     const handleUpload = () => {
       canvas.current.exportImage("png")
         .then(data => {
-          console.log('draw' + data);
           props.sendImg(data)
         })
         .catch(e => {

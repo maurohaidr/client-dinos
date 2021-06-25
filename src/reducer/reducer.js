@@ -14,7 +14,6 @@ export default function reducer(state = initialState, action) {
         }
       }
       case SEND_IMG: {
-        console.log('reducer ' + action.payload)
         return{
         ...state,
         img: action.payload

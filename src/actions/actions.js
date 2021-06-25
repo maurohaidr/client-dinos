@@ -12,7 +12,6 @@ export function getDinos(dino) {
     };
 }
 export function sendImg(img) {
-  console.log('actions' + img)
   return function(dispatch) {
     console.log('actions 2' + img)
     dispatch({ type: SEND_IMG, payload:img})
