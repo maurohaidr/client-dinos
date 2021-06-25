@@ -29,11 +29,15 @@ const Draw = (props) => {
     }
     const handleRosa = function(){
       setWidth(2)
-    setColor('rosa')
+    setColor('pink')
   }
   const handleVioleta = function(){
     setWidth(2)
-  setColor('violeta')
+  setColor('purple')
+}
+const handleAmarillo = function(){
+  setWidth(2)
+setColor('yellow')
 }
     const handleErase = function(){
         setColor('white')
@@ -68,6 +72,7 @@ const Draw = (props) => {
         <button className='azul' onClick={handleBlue}></button>
         <button className='rosa' onClick={handleRosa}></button>
         <button className='violeta' onClick={handleVioleta}></button>
+        <button className='amarillo' onClick={handleAmarillo}></button>
         <button className='borrar' onClick={handleErase}>Borrar</button>        
         </div>
         </div>
