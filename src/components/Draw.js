@@ -62,12 +62,12 @@ const Draw = (props) => {
         strokeColor={color}
         />
         <div className='buttonBox'>
-        <button className='rojo' onClick={handleRed}>Rojo</button>
-        <button className='negro' onClick={handleBlack}>Negro</button>
-        <button className='verde' onClick={handleGreen}>Verde</button>
-        <button className='azul' onClick={handleBlue}>Azul</button>
-        <button className='rosa' onClick={handleRosa}>Rosa</button>
-        <button className='violeta' onClick={handleVioleta}>Violeta</button>
+        <button className='rojo' onClick={handleRed}></button>
+        <button className='negro' onClick={handleBlack}></button>
+        <button className='verde' onClick={handleGreen}></button>
+        <button className='azul' onClick={handleBlue}></button>
+        <button className='rosa' onClick={handleRosa}></button>
+        <button className='violeta' onClick={handleVioleta}></button>
         <button className='borrar' onClick={handleErase}>Borrar</button>        
         </div>
         </div>
