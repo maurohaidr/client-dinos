@@ -127,7 +127,7 @@ return(
             )
       })
       : props.dinos && props.dinos.length < 1? <div className='dinoCardNotFound'>
-        <img className='imgCard' src='https://i.gifer.com/1FEk.gif' width="320" height="207" alt="" />
+        <img className='imgCard' src='https://i.gifer.com/1FEk.gif' width="315" height="205" alt="" />
         <span className='textCardNotFound'>Sorry, but we couldn't find any dino to match your search!</span>
         </div> 
       : searching &&
