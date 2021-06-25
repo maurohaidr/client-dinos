@@ -103,9 +103,9 @@ return(
   <div className='pageBox'>
     {props.dinos && props.dinos.length > 0 ? 
     <div className='btnPageBox'>
-      <button className='btnPage' onClick={(e) => prevPage(e)}>left</button>
+      <button className='btnPage' onClick={(e) => prevPage(e)}>prev</button>
       <span className='numberPage'>{page + 1}/{Math.ceil(props.dinos.length/8)}</span>
-      <button className='btnPage' onClick={(e) => nextPage(e)}>right</button>   
+      <button className='btnPage' onClick={(e) => nextPage(e)}>next</button>   
     </div>
     : null
     }
