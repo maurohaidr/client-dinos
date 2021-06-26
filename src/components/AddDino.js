@@ -3,7 +3,6 @@ import axios from "axios"
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import './AddDino.css'
-const { DB_HOST } = process.env
 const AddDino = (props) => {
     const[state, setState] = useState({
         nombre: '',
@@ -80,7 +79,9 @@ const AddDino = (props) => {
             &nbsp;<span className='aligned'>*</span> 
           </div>     
           <div>
+          <Link to='/home'>
           <input className='btnCre' type='submit' value='Add'/>
+          </Link>          
           </div>
         </form>
         </div>
