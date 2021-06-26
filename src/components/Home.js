@@ -12,7 +12,7 @@ const Home = (props) => {
   const [ascenDescen, setAscenDescen] = useState('up')
   const [searching, setSearching] = useState(false)
   useEffect(() => {
-    props.getDinos()
+    props.getDinos('')
     }, [])
 
   let handleChange = function (e) {
