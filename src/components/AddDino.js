@@ -79,9 +79,7 @@ const AddDino = (props) => {
             &nbsp;<span className='aligned'>*</span> 
           </div>     
           <div>
-          <Link to='/home'>
-          <input className='btnCre' type='submit' value='Add'/>
-          </Link>          
+          <input className='btnCre' type='submit' value='Add'/>        
           </div>
         </form>
         </div>
